@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
-import reducer, { ADD_ONE, APPLY_NUMBER, CHANGE_OPERATION, CLEAR_DISPLAY, initialState } from './reducers/index'
+import reducer, { ADD_ONE, APPLY_NUMBER, CHANGE_OPERATION, CLEAR_DISPLAY, M_PLUS, M_R, M_C, initialState } from './reducers/index'
 import './App.css';
-import { addOne, applyNumber, changeOperation, clearDisplay } from './actions/index' 
+import { addOne, applyNumber, changeOperation, clearDisplay, mPlus, mR, mC } from './actions/index' 
 
 import TotalDisplay from './components/TotalDisplay';
 import CalcButton from './components/CalcButton';
@@ -26,9 +26,9 @@ function App() {
             </div>
             
             <div className="row">
-              <CalcButton value={"M+"}/>
-              <CalcButton value={"MR"}/>
-              <CalcButton value={"MC"}/>
+              <CalcButton value={"M+"} onClick={() => dispatch(mPlus())}/>
+              <CalcButton value={"MR"} onClick={() => dispatch(mR())}/>
+              <CalcButton value={"MC"} onClick={() => dispatch(mC())}/>
             </div>
 
             <div className="row">
