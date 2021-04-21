@@ -26,14 +26,14 @@ export const clearDisplay = (number) => {
     {type:CLEAR_DISPLAY, payload:number}
     )
 }
-export const memoryPlus = (number) => {
+export const memoryPlus = () => {
     return(
-    {type: MEMORY_PLUS, payload: number}
+    {type: MEMORY_PLUS}
     )
 }
-export const memoryR = (number) => {
+export const memoryR = () => {
     return(
-    {type: MEMORY_R, payload:number}
+    {type: MEMORY_R}
     )
 }
 export const memoryClear = (number) => {
